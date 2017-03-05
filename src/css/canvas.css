@@ -1,0 +1,90 @@
+/*
+ * Canvas styles
+ */
+
+#d_container {
+  width: 100%;
+  height: 100%;
+}
+
+#canvas_t {
+  float: left;
+  margin-left: 0px;
+  width: 5%;
+  z-index: 1;
+}
+
+.d_stage{
+  float: right;
+  width: 95%;
+  height: 100%;
+  z-index: 0;
+  overflow: auto;
+}
+
+#c_name {
+  border: none;
+  float: left;
+  margin-left: 5px;
+  color: #808080;
+  font-size: 16px;
+  font-family: cursive;
+}
+
+#s_canvas {
+  border: none;
+  display: inline-block;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+#s_canvas:hover {
+  background-color: #21c0c0;
+}
+
+#t_bmc{
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8 url(../res/bg.png) repeat;
+}
+
+#t_bmc td{
+  width: 10%;
+  height: 20%;
+}
+
+#t_bmc h4{
+  margin-top: 5px;
+  width: 9%;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#t_bmc img{
+  width: 20%;
+  height: 50px;
+  float: right;
+}
+
+#t_bmc p{
+  font-size: 10px;
+  font-family: cursive;
+}
+
+#t_bmc fieldset{
+  border: none;
+  border-left: 1px solid #808080;
+  border-top: 1px solid #808080;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#t_bmc legend{
+  margin: 0 auto;
+  color: #808080;
+  font-family: cursive;
+  font-weight: bold;
+}

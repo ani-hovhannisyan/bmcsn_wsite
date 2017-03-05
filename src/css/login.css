@@ -1,0 +1,61 @@
+/*
+ * Existing users list in local machine
+ */
+
+#i_login {
+  margin: auto;
+  margin-top: 90px;
+  padding: 7px;
+
+  display: block;
+  width: 200px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+
+  outline: none;
+  font-size: 20px;
+  color: #8a8a8a;
+}
+
+#i_login:focus {
+  box-shadow: 0 0 1px #dbdada;
+}
+
+#i_login::-webkit-input-placeholder {
+  color: #dbd8d5;
+}
+
+#b_login {
+  outline: none;
+  margin: auto;
+  margin-top: 5px;
+  padding: 7px;
+  display: block;
+  width: 200px;
+
+  background-color: #f9f9f9;
+  box-shadow: 0px 3px #dadada;
+
+  font-family: Arial;
+  color: #8a8a8a;
+  font-size: 20px;
+
+
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+
+  text-decoration: none;
+}
+
+#b_login:hover {
+  background-color: #fcfcfc;
+}
+
+#b_login:active {
+  background-color: #fdfdfd;
+  box-shadow: 0px 2px #c3c3c3;
+  transform: translateY(5px);
+}

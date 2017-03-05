@@ -1,0 +1,238 @@
+/*
+ * User Main styles
+ */
+
+.select-editable {
+  position:relative;
+  background-color:white;
+  border:solid grey 1px;
+  width:120px;
+  height:18px;
+}
+
+.select-editable select {
+  position:absolute;
+  top:0px;
+  left:0px;
+  font-size:14px;
+  border:none;
+  width:120px;
+  margin:0;
+}
+
+.select-editable input {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100px;
+  padding:1px;
+  font-size:12px;
+  border:none;
+}
+
+.select-editable select:focus, .select-editable input:focus {
+  outline:none;
+} 
+
+/*
+ * webkit settings
+ */
+
+::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #808080;
+}
+
+/*
+ * Popup Dialog box styles
+ */
+
+.ui-dialog {
+  color: #fff;
+}
+
+.ui-dialog .parts {
+  margin: 5px;
+  border: none;
+}
+
+.ui-dialog .parts select{
+  margin: 5px;
+  border: none;
+  display: block;
+}
+
+.ui-dialog .ui-dialog-titlebar{
+  border: none;
+  background-color: #808080;
+  color: #fff;
+}
+
+.ui-dialog .ui-dialog-content {
+  color: #fff;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  border: none;
+}
+
+.ui-dialog label {
+  margin: 0 5px 0 5px;
+  color: #808080;
+}
+
+.ui-dialog input {
+  margin: 0 5px 0 5px;
+  color: #808080;
+}
+
+.ui-dialog select {
+  margin: 0 5px 0 5px;
+  background-color: #fff;
+  color: #808080;
+}
+.alert_dialog label, .alert_dialog input {
+  margin-top: 5px;
+}
+
+#user_t {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 0px;
+  text-align: center;
+  z-index: 1;
+  padding: 5px;
+}
+
+#user_t ::-webkit-input-placeholder{
+  color: #808080;
+}
+
+.notify {
+  height: 20px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 10px;
+  color: #808080;
+  font-family: Calibri;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  z-index: 100;
+  box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+}
+
+#d_umt {
+  display: block;
+  width: 5%;
+  z-index: 1;
+  background-color: #ff9;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0px;
+}
+
+button {
+  border: 1px solid #fff;
+  display: block;
+}
+
+#b_import, #b_export, #b_save, #b_edit, #b_new, #b_open {
+  outline: none;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+
+  font-family: Arial;
+  color: #8a8a8a;
+  font-size: 20px;
+  text-decoration: none;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 50%;
+
+  box-shadow: 0px 2px #dadada;
+  background-color: #ff9;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+}
+
+#b_import:hover, #b_export:hover,
+#b_new:hover, #b_open:hover, #b_save:hover, #b_edit:hover {
+  background-color: #ffffbb;
+}
+
+#b_export:active, #b_new:active,
+#b_open:active, #b_save:active, #b_edit:active {
+  box-shadow: 0px 1px #ffffcc;
+  transform: translateY(3px);
+}
+
+#b_new {
+  background-image: url(../res/new.svg);
+}
+
+#b_open {
+  background-image: url(../res/open.svg);
+}
+
+#b_save {
+  background-image: url(../res/save.svg);
+}
+
+#b_edit {
+  background-image: url(../res/edit.svg);
+}
+
+#b_export {
+  background-image: url(../res/export.svg);
+}
+
+#b_import {
+  background-image: url(../res/import.svg);
+}
+
+#l_user {
+  display: block;
+  line-height: 180%;
+  margin: auto;
+  margin-right: 10px;
+  float: right;
+  width: 20px;
+  height: 20px;
+
+  font-family: Arial;
+  color: #8a8a8a;
+  text-align: center;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 50%;
+
+  background-color: #ff9;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+  color: #808080;
+}
+
+#l_user:hover {
+}
+.ade {
+  display: block;
+}
