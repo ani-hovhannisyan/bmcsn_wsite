@@ -52,12 +52,12 @@ var initUserToolbar = function(u_name){
 var login = function(){
   var i_login = $("#i_login");
   i_login.focus();
-  var b_login = $("#b_login");
   i_login.keyup(function(e){
     if (13 == e.keyCode) {
       loginUserData({"name": i_login.val()});
     }
   });
+  var b_login = $("#b_login");
   b_login.bind('click', function(e){
     loginUserData({"name": i_login.val()});
   });
@@ -72,59 +72,59 @@ var loginUserData = function(data){
   getUserData(data["name"]);
 };
 
-var socket;
-function init() {
-  var host = "ws://127.0.0.1:6767/server/aniws"; // SET THIS TO YOUR SERVER
-  try {
-    socket = new WebSocket(host);
-    log('WebSocket - status '+socket.readyState);
-    socket.onopen    = function(msg) { 
-      log("Welcome - status "+this.readyState); 
-    };
-    socket.onmessage = function(msg) { 
-      log("Received: "+msg.data); 
-    };
-    socket.onclose   = function(msg) { 
-      log("Disconnected - status "+this.readyState); 
-    };
-  } catch(ex){ 
-    log(ex); 
-  }
-  $("msg").focus();
-};
-function send(){
-  var txt,msg;
-  txt = $("msg");
-  msg = txt.value;
-  if(!msg) { 
-    alert("Message can not be empty"); 
-    return; 
-  }
-  txt.value="";
-  txt.focus();
-  try { 
-    socket.send(msg); 
-    log('Sent: '+msg); 
-  } catch(ex) { 
-    log(ex); 
-  }
-};
-function quit(){
-  if (socket != null) {
-    log("Goodbye!");
-    socket.close();
-    socket=null;
-  }
-};
-function reconnect() {
-  quit();
-  init();
-};
-function log(msg){
-  console.log(msg)
-};
+//var socket;
+//function init() {
+//  var host = "ws://127.0.0.1:6767/server/aniws"; // SET THIS TO YOUR SERVER
+//  try {
+//    socket = new WebSocket(host);
+//    log('WebSocket - status '+socket.readyState);
+//    socket.onopen    = function(msg) { 
+//      log("Welcome - status "+this.readyState); 
+//    };
+//    socket.onmessage = function(msg) { 
+//      log("Received: "+msg.data); 
+//    };
+//    socket.onclose   = function(msg) { 
+//      log("Disconnected - status "+this.readyState); 
+//    };
+//  } catch(ex){ 
+//    log(ex); 
+//  }
+//  $("msg").focus();
+//};
+//function send(){
+//  var txt,msg;
+//  txt = $("msg");
+//  msg = txt.value;
+//  if(!msg) { 
+//    alert("Message can not be empty"); 
+//    return; 
+//  }
+//  txt.value="";
+//  txt.focus();
+//  try { 
+//    socket.send(msg); 
+//    log('Sent: '+msg); 
+//  } catch(ex) { 
+//    log(ex); 
+//  }
+//};
+//function quit(){
+//  if (socket != null) {
+//    log("Goodbye!");
+//    socket.close();
+//    socket=null;
+//  }
+//};
+//function reconnect() {
+//  quit();
+//  init();
+//};
+//function log(msg){
+//  console.log(msg)
+//};
 var getUserData = function(name){
-	init();
+	//init();
   //var url = document.location.href + 'api/server.php' + '/test';
   //  $.ajax({
   //    type : "GET",
@@ -141,13 +141,13 @@ var getUserData = function(name){
   //if (chrome.runtime.error) {
   //  console.log("Fail: Get user name: Runtime error.");
   //} else {
-  //  var d = {
-  //    type: "storage-login",
-  //    name: name.toLowerCase(),
-  //    stat: false,
-  //    items: []
-  //  };
-  //  $.event.trigger(d);
+    var d = {
+      type: "storage-login",
+      name: name.toLowerCase() || "user",
+      stat: false,
+      items: []
+    };
+    $.event.trigger(d);
   // }
   //});
 };
